@@ -1,0 +1,690 @@
+/* ═══════════════════════════════════════════════════════════
+   MAC Documentation — Custom Theme v3
+   All-light palette · Dark black text · Eye-soothing shades
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --mac-accent:        #C2703A;
+  --mac-accent-hover:  #A85C28;
+  --mac-accent-light:  #FDF0E2;
+  --mac-accent-lighter:#FFF8F0;
+  --mac-bg:            #FDFBF9;
+  --mac-bg-warm:       #F9F3EC;
+  --mac-card:          #FFFFFF;
+  --mac-text:          #111111;
+  --mac-text-body:     #1a1a1a;
+  --mac-muted:         #555555;
+  --mac-border:        #E8E2DB;
+  --mac-code-bg:       #FDF5EC;
+  --mac-success:       #16A34A;
+  --mac-danger:        #DC2626;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FULL-WIDTH CONTENT
+   ═══════════════════════════════════════════════════════════ */
+
+.wy-nav-content {
+  max-width: none !important;
+  padding: 28px 48px !important;
+  background: var(--mac-bg) !important;
+}
+
+.wy-nav-content-wrap {
+  background: var(--mac-bg) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   GLOBAL — dark black text everywhere
+   ═══════════════════════════════════════════════════════════ */
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+  color: var(--mac-text) !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   LIGHT SIDEBAR
+   ═══════════════════════════════════════════════════════════ */
+
+.wy-nav-side {
+  background: var(--mac-bg-warm) !important;
+  border-right: 1px solid var(--mac-border) !important;
+}
+
+.wy-side-scroll {
+  background: transparent !important;
+}
+
+.wy-side-nav-search {
+  background: var(--mac-accent-light) !important;
+  border-bottom: 1px solid var(--mac-border) !important;
+  padding: 18px 14px !important;
+}
+
+.wy-side-nav-search > a {
+  color: var(--mac-text) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 800 !important;
+  font-size: 0.95rem !important;
+}
+
+.wy-side-nav-search > a:hover {
+  color: var(--mac-accent) !important;
+}
+
+.wy-side-nav-search > a img.logo {
+  max-width: 72px !important;
+  margin: 0 auto 10px !important;
+  display: block;
+  border-radius: 10px;
+}
+
+.wy-side-nav-search input[type="text"] {
+  border: 1px solid var(--mac-border) !important;
+  background: var(--mac-card) !important;
+  color: var(--mac-text) !important;
+  border-radius: 8px !important;
+  padding: 8px 12px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.85rem !important;
+}
+
+.wy-side-nav-search input[type="text"]:focus {
+  border-color: var(--mac-accent) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(194,112,58,0.12) !important;
+}
+
+.wy-side-nav-search > div.version {
+  color: var(--mac-muted) !important;
+  font-size: 0.75rem !important;
+}
+
+/* Nav items */
+.wy-menu-vertical { padding: 8px 0 !important; }
+
+.wy-menu-vertical header,
+.wy-menu-vertical p.caption {
+  color: var(--mac-accent) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.7rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 14px 20px 6px !important;
+}
+
+.wy-menu-vertical a {
+  color: var(--mac-text-body) !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 0.85rem !important;
+  padding: 8px 20px !important;
+  border-left: 3px solid transparent !important;
+  transition: all 0.12s ease !important;
+}
+
+.wy-menu-vertical a:hover {
+  background: rgba(194,112,58,0.08) !important;
+  color: var(--mac-accent) !important;
+  border-left-color: rgba(194,112,58,0.3) !important;
+}
+
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.current a.current {
+  background: var(--mac-accent-light) !important;
+  color: var(--mac-accent-hover) !important;
+  border-left-color: var(--mac-accent) !important;
+  font-weight: 600 !important;
+}
+
+.wy-menu-vertical li.toctree-l1.current > a.current,
+.wy-menu-vertical li.toctree-l2.current > a.current {
+  background: var(--mac-accent-light) !important;
+  color: var(--mac-accent-hover) !important;
+  border-left-color: var(--mac-accent) !important;
+}
+
+.wy-menu-vertical li.current {
+  background: rgba(194,112,58,0.04) !important;
+}
+
+.wy-menu-vertical li.toctree-l1.current li.toctree-l2 > a,
+.wy-menu-vertical li.toctree-l2.current li.toctree-l3 > a {
+  background: transparent !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HEADINGS — all dark black
+   ═══════════════════════════════════════════════════════════ */
+
+h1, h2, h3, h4, h5, h6,
+.rst-content h1, .rst-content h2, .rst-content h3,
+.rst-content h4, .rst-content h5, .rst-content h6 {
+  font-family: 'Inter', sans-serif !important;
+  color: var(--mac-text) !important;
+  font-weight: 800 !important;
+}
+
+.rst-content h1 {
+  font-size: 1.85rem !important;
+  border-bottom: 3px solid var(--mac-accent) !important;
+  padding-bottom: 12px !important;
+  margin-bottom: 24px !important;
+}
+
+.rst-content h2 {
+  font-size: 1.4rem !important;
+  border-bottom: 2px solid var(--mac-border) !important;
+  padding-bottom: 8px !important;
+  margin-top: 36px !important;
+}
+
+.rst-content h3 {
+  font-size: 1.15rem !important;
+  margin-top: 28px !important;
+}
+
+.rst-content h4 {
+  font-size: 1rem !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   BODY TEXT — dark black, all of it
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content p {
+  font-size: 0.92rem !important;
+  line-height: 1.7 !important;
+  color: var(--mac-text-body) !important;
+}
+
+.rst-content li {
+  color: var(--mac-text-body) !important;
+  margin-bottom: 4px !important;
+}
+
+.rst-content ul, .rst-content ol {
+  font-size: 0.92rem !important;
+  line-height: 1.7 !important;
+  color: var(--mac-text-body) !important;
+}
+
+.rst-content dl dt {
+  font-weight: 700 !important;
+  color: var(--mac-text) !important;
+  border-top: 1px solid var(--mac-border) !important;
+  padding-top: 10px !important;
+  margin-top: 10px !important;
+}
+
+.rst-content dl dd {
+  padding-left: 20px !important;
+  margin-bottom: 12px !important;
+  color: var(--mac-text-body) !important;
+}
+
+/* Links */
+a, .rst-content a {
+  color: var(--mac-accent) !important;
+  text-decoration: none !important;
+}
+
+a:hover, .rst-content a:hover {
+  color: var(--mac-accent-hover) !important;
+  text-decoration: underline !important;
+}
+
+.wy-breadcrumbs li a { color: var(--mac-accent) !important; }
+
+/* ═══════════════════════════════════════════════════════════
+   CODE BLOCKS — LIGHT, eye-soothing, dark text
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content code,
+.rst-content tt {
+  font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+  background: var(--mac-code-bg) !important;
+  color: var(--mac-text) !important;
+  border: 1px solid var(--mac-border) !important;
+  border-radius: 5px !important;
+  padding: 2px 6px !important;
+  font-size: 0.82em !important;
+}
+
+/* Fenced code blocks — LIGHT background with dark text */
+.rst-content pre {
+  background: var(--mac-code-bg) !important;
+  border: 1px solid var(--mac-border) !important;
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+  font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+  font-size: 0.82rem !important;
+  line-height: 1.6 !important;
+  overflow-x: auto !important;
+  color: var(--mac-text) !important;
+}
+
+.rst-content pre code,
+.rst-content pre tt {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  color: var(--mac-text) !important;
+  font-size: inherit !important;
+}
+
+.highlight {
+  background: var(--mac-code-bg) !important;
+  border-radius: 10px !important;
+}
+
+.highlight pre {
+  background: transparent !important;
+  border: none !important;
+  color: var(--mac-text) !important;
+}
+
+/* Syntax highlight tokens — all dark readable on light bg */
+.highlight .c,  .highlight .cm, .highlight .c1, .highlight .cs { color: #7a6a55 !important; font-style: italic; } /* comments */
+.highlight .k,  .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kd { color: #9e4a1e !important; font-weight: 600; } /* keywords */
+.highlight .s,  .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .se, .highlight .sh, .highlight .si, .highlight .sx, .highlight .sr, .highlight .ss { color: #2e7d32 !important; } /* strings */
+.highlight .n,  .highlight .na, .highlight .nb, .highlight .nc, .highlight .no, .highlight .nd, .highlight .ni, .highlight .ne, .highlight .nf, .highlight .nl, .highlight .nn, .highlight .nt, .highlight .nv { color: var(--mac-text) !important; } /* names */
+.highlight .o,  .highlight .ow { color: #8B5E3C !important; } /* operators */
+.highlight .m,  .highlight .mi, .highlight .mf, .highlight .mh, .highlight .mo { color: #1565C0 !important; } /* numbers */
+.highlight .p   { color: var(--mac-text) !important; } /* punctuation */
+.highlight .bp  { color: #6d4c41 !important; } /* builtins */
+.highlight .gd  { color: #c62828 !important; background: #ffebee !important; } /* diff deleted */
+.highlight .gi  { color: #2e7d32 !important; background: #e8f5e9 !important; } /* diff inserted */
+.highlight .gh  { color: var(--mac-text) !important; font-weight: 700; } /* generic heading */
+.highlight .go  { color: var(--mac-muted) !important; } /* generic output */
+.highlight .gp  { color: var(--mac-accent) !important; font-weight: 700; } /* generic prompt */
+.highlight .err { color: #c62828 !important; } /* error */
+
+/* ═══════════════════════════════════════════════════════════
+   TABLES — light, readable, dark text
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content table.docutils,
+.rst-content table.field-list {
+  border-collapse: separate !important;
+  border-spacing: 0 !important;
+  border: 1px solid var(--mac-border) !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  font-size: 0.88rem !important;
+}
+
+.rst-content table.docutils thead th,
+.rst-content table.field-list thead th {
+  background: var(--mac-accent-light) !important;
+  color: #3D2316 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.78rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 12px 16px !important;
+  border-bottom: 2px solid var(--mac-border) !important;
+}
+
+.rst-content table.docutils td,
+.rst-content table.field-list td {
+  padding: 10px 16px !important;
+  border-bottom: 1px solid var(--mac-border) !important;
+  vertical-align: middle !important;
+  color: var(--mac-text-body) !important;
+  background: var(--mac-card) !important;
+}
+
+.rst-content table.docutils tr:nth-child(even) td {
+  background: var(--mac-accent-lighter) !important;
+}
+
+.rst-content table.docutils tr:hover td {
+  background: var(--mac-accent-light) !important;
+}
+
+.rst-content table.docutils tr:last-child td {
+  border-bottom: none !important;
+}
+
+.rst-content table.docutils code,
+.rst-content table.docutils tt {
+  font-size: 0.8em !important;
+  padding: 1px 5px !important;
+  background: var(--mac-code-bg) !important;
+  color: var(--mac-text) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   ADMONITIONS — very light pastel shades, dark text
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content .admonition {
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+  margin: 20px 0 !important;
+  font-family: 'Inter', sans-serif !important;
+  border: none !important;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04) !important;
+  color: var(--mac-text-body) !important;
+}
+
+.rst-content .admonition p {
+  color: var(--mac-text-body) !important;
+}
+
+.rst-content .admonition-title {
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.85rem !important;
+  border-radius: 8px 8px 0 0 !important;
+  margin: -16px -20px 12px !important;
+  padding: 10px 20px !important;
+}
+
+/* Note */
+.rst-content .admonition.note {
+  background: #FFF8F0 !important;
+  border-left: 4px solid var(--mac-accent) !important;
+}
+.rst-content .admonition.note .admonition-title {
+  background: #FDF0E2 !important;
+  color: #5C3A1E !important;
+}
+
+/* Tip */
+.rst-content .admonition.tip {
+  background: #F0FDF4 !important;
+  border-left: 4px solid var(--mac-success) !important;
+}
+.rst-content .admonition.tip .admonition-title {
+  background: #DCFCE7 !important;
+  color: #14532D !important;
+}
+
+/* Warning */
+.rst-content .admonition.warning {
+  background: #FFF5F5 !important;
+  border-left: 4px solid var(--mac-danger) !important;
+}
+.rst-content .admonition.warning .admonition-title {
+  background: #FEE2E2 !important;
+  color: #7F1D1D !important;
+}
+
+/* Important */
+.rst-content .admonition.important {
+  background: #FFF8F0 !important;
+  border-left: 4px solid var(--mac-accent-hover) !important;
+}
+.rst-content .admonition.important .admonition-title {
+  background: #FDF0E2 !important;
+  color: #5C3A1E !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FIGURES / IMAGES
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content .figure,
+.rst-content figure {
+  border: 1px solid var(--mac-border) !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 12px rgba(28,25,23,0.06) !important;
+  margin: 24px 0 !important;
+  background: var(--mac-card) !important;
+}
+
+.rst-content .figure img,
+.rst-content figure img,
+.rst-content img {
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+}
+
+.rst-content .figure .caption,
+.rst-content figure figcaption,
+.rst-content .figure p.caption {
+  padding: 10px 16px !important;
+  font-size: 0.8rem !important;
+  color: var(--mac-muted) !important;
+  font-style: italic;
+  background: var(--mac-bg-warm) !important;
+  border-top: 1px solid var(--mac-border) !important;
+  text-align: center;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HR
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content hr {
+  border: none !important;
+  height: 2px !important;
+  background: linear-gradient(90deg, transparent, var(--mac-border), transparent) !important;
+  margin: 32px 0 !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   NEXT / PREV / FOOTER / EDIT BUTTON
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-footer-buttons .btn {
+  background: var(--mac-card) !important;
+  color: var(--mac-accent) !important;
+  border: 1px solid var(--mac-border) !important;
+  border-radius: 8px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 600 !important;
+  padding: 10px 20px !important;
+  transition: all 0.15s ease !important;
+}
+
+.rst-footer-buttons .btn:hover {
+  background: var(--mac-accent-light) !important;
+  color: var(--mac-accent-hover) !important;
+  border-color: var(--mac-accent) !important;
+}
+
+footer { font-family: 'Inter', sans-serif !important; color: var(--mac-muted) !important; }
+footer a { color: var(--mac-accent) !important; }
+
+.wy-breadcrumbs-aside a {
+  background: var(--mac-accent) !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+  padding: 4px 12px !important;
+  font-size: 0.75rem !important;
+  font-weight: 600 !important;
+}
+
+.wy-breadcrumbs-aside a:hover {
+  background: var(--mac-accent-hover) !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   SCROLLBAR
+   ═══════════════════════════════════════════════════════════ */
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #DDD4C8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--mac-accent); }
+
+/* ═══════════════════════════════════════════════════════════
+   MISC
+   ═══════════════════════════════════════════════════════════ */
+
+.rst-content .hlist td { border: none !important; padding: 2px 16px 2px 0 !important; }
+
+.rst-content .topic {
+  background: var(--mac-bg-warm) !important;
+  border: 1px solid var(--mac-border) !important;
+  border-radius: 10px !important;
+  padding: 16px 20px !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — TABLET
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .wy-nav-content { padding: 20px 28px !important; }
+  .rst-content h1 { font-size: 1.5rem !important; }
+  .rst-content h2 { font-size: 1.25rem !important; }
+  .rst-content table.docutils th,
+  .rst-content table.docutils td { padding: 8px 12px !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE
+   ═══════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  .wy-nav-content { padding: 16px !important; }
+  .rst-content h1 { font-size: 1.3rem !important; padding-bottom: 8px !important; }
+  .rst-content h2 { font-size: 1.1rem !important; margin-top: 24px !important; }
+  .rst-content h3 { font-size: 0.95rem !important; }
+  .rst-content p  { font-size: 0.88rem !important; }
+
+  .rst-content table.docutils {
+    display: block !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    font-size: 0.78rem !important;
+    border-radius: 8px !important;
+  }
+  .rst-content table.docutils thead th { padding: 8px 10px !important; font-size: 0.68rem !important; white-space: nowrap !important; }
+  .rst-content table.docutils td { padding: 8px 10px !important; }
+
+  .rst-content .figure,
+  .rst-content figure {
+    margin: 16px -16px !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+  }
+
+  .rst-content pre { padding: 12px 14px !important; font-size: 0.75rem !important; border-radius: 8px !important; }
+  .rst-content .admonition { padding: 12px 14px !important; margin: 14px 0 !important; border-radius: 8px !important; }
+  .rst-content .admonition-title { margin: -12px -14px 10px !important; padding: 8px 14px !important; font-size: 0.8rem !important; }
+
+  .rst-footer-buttons { flex-direction: column !important; gap: 8px !important; }
+  .rst-footer-buttons .btn { width: 100% !important; text-align: center !important; }
+
+  .wy-nav-top {
+    background: var(--mac-bg-warm) !important;
+    color: var(--mac-text) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 700 !important;
+    border-bottom: 1px solid var(--mac-border) !important;
+  }
+  .wy-nav-top a { color: var(--mac-text) !important; }
+  .wy-nav-top i { color: var(--mac-accent) !important; }
+  .wy-nav-side { width: 280px !important; }
+}
+
+@media (max-width: 480px) {
+  .wy-nav-content { padding: 12px 10px !important; }
+  .rst-content h1 { font-size: 1.15rem !important; word-break: break-word; }
+  .rst-content h2 { font-size: 1rem !important; }
+  .rst-content pre { font-size: 0.7rem !important; padding: 10px !important; }
+  .rst-content table.docutils td,
+  .rst-content table.docutils th { padding: 6px 8px !important; font-size: 0.72rem !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   PRINT
+   ═══════════════════════════════════════════════════════════ */
+
+@media print {
+  .wy-nav-side, .wy-nav-top, .rst-footer-buttons, .wy-breadcrumbs-aside { display: none !important; }
+  .wy-nav-content-wrap { margin-left: 0 !important; }
+  .wy-nav-content { max-width: 100% !important; padding: 0 !important; }
+}
+
+/* ═══════════════════════════════════════════════════════════
+   HIDE "Built with Sphinx" FOOTER
+   ═══════════════════════════════════════════════════════════ */
+
+footer span.commit,
+footer span:has(a[href*="sphinx"]),
+footer > * {
+  /* hide everything in the footer */
+}
+
+/* Hide the "Built with Sphinx..." line completely */
+div[role="contentinfo"] p:last-child {
+  display: none !important;
+}
+
+/* Also target the specific RTD "Built with" text */
+footer p:has(a[href*="sphinx-doc"]),
+footer p:has(a[href*="readthedocs"]) {
+  display: none !important;
+}
+
+/* Fallback: hide any paragraph in footer containing "Built with" */
+div[role="contentinfo"] p {
+  display: none !important;
+}
+
+/* Keep copyright visible */
+div[role="contentinfo"] p:first-child {
+  display: block !important;
+}
+
+/* ═══════════════════════════════════════════════════════════
+   FIX SIDEBAR: Caption "USER GUIDE" not clipped
+   ═══════════════════════════════════════════════════════════ */
+
+/* Ensure the sidebar menu scrolls properly and captions are never hidden */
+.wy-side-scroll {
+  padding-bottom: 20px !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+/* Prevent the search area from overlapping the nav menu */
+.wy-side-nav-search {
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+/* Give the menu area proper spacing so first caption is never hidden */
+.wy-menu.wy-menu-vertical {
+  padding-top: 12px !important;
+  padding-bottom: 20px !important;
+}
+
+/* Make captions (USER GUIDE, TECHNICAL REFERENCE, etc.) fully visible */
+.wy-menu-vertical p.caption {
+  margin-top: 16px !important;
+  margin-bottom: 4px !important;
+  padding: 10px 20px 6px !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* First caption needs less top margin */
+.wy-menu-vertical p.caption:first-child,
+.wy-menu-vertical > ul:first-child > li:first-child > p.caption {
+  margin-top: 4px !important;
+}
+
+html { scroll-behavior: smooth; }
+::selection { background: var(--mac-accent-light); color: var(--mac-text); }
+
